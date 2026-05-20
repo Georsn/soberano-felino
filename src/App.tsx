@@ -52,21 +52,28 @@ export default function App() {
         />
 
         {/* Humorous announcement rail / public bulletin (Architectural Honesty / No SLOP) */}
-        <div className="bg-[#2C2A29] py-3.5 px-6 text-[#FAF6F0] overflow-hidden" id="bulletin-bar">
-          <div className="mx-auto max-w-7xl flex items-center justify-between text-xs sm:text-sm font-semibold font-mono tracking-wide">
-            <div className="flex items-center gap-2 shrink-0">
-              <AlertTriangle className="h-4.5 w-4.5 text-[#E8C26E]" />
-              <span>ATENÇÃO:</span>
-            </div>
-            <div className="marquee-text-container select-none">
-              A soberania felina já domina 43 mil lares brasileiros hoje. Força, resistência doméstica! 🐾
-            </div>
-            <div className="hidden md:flex items-center gap-5 shrink-0 opacity-75">
-              <span>Status: Alerta Laranja 🍊</span>
-              <span>Protejam os copos d'água</span>
-            </div>
-          </div>
+        <div className="bg-[#2C2A29] py-3.5 px-4 sm:px-6 text-[#FAF6F0] overflow-hidden" id="bulletin-bar">
+        <div className="mx-auto max-w-7xl flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold font-mono tracking-wide">
+
+        {/* Esquerda */}
+        <div className="flex items-center gap-2 shrink-0">
+        <AlertTriangle className="h-4 w-4 text-[#E8C26E]" />
+        <span>ATENÇÃO:</span>
         </div>
+
+        {/* Centro (marquee) */}
+        <div className="flex-1 min-w-0 marquee-text-container select-none">
+           A soberania felina já domina 43 mil lares brasileiros hoje. Força, resistência doméstica! 🐾
+        </div>
+
+        {/* Direita */}
+        <div className="w-full sm:w-auto flex justify-between sm:justify-end gap-4 opacity-75">
+          <span>Status: Alerta Laranja 🍊</span>
+          <span className="hidden sm:inline">Protejam os copos d'água</span>
+       </div>
+
+       </div>
+       </div>
 
         {/* Dynamic reasons section with interactive filter options */}
         <ReasonsGallery />
