@@ -1,0 +1,6 @@
+{
+  "name": "Motivos para Não Adotar um Gato",
+  "description": "Um guia bem-humorado, sarcástico e fofo sobre as regras reais de convivência com felinos, ajudando você a decidir se está pronto para aceitar seu novo soberano.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
