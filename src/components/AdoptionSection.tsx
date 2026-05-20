@@ -58,7 +58,7 @@ export default function AdoptionSection({ isOpen, onClose }: AdoptionSectionProp
           {/* Emotional Pitch */}
           <div className="flex flex-col gap-3">
             <h4 className="font-sans text-lg font-bold text-[#C85C50] flex items-center gap-2">
-              <Heart className="h-5 w-5 fill-[#C85C50]" /> Why they are absolutely worth it:
+              <Heart className="h-5 w-5 fill-[#C85C50]" /> Por que eles valem absolutamente a pena:
             </h4>
             
             <p className="font-sans text-sm leading-relaxed text-[#5C554F]">
