@@ -52,72 +52,28 @@ export default function App() {
         />
 
         {/* Humorous announcement rail / public bulletin (Architectural Honesty / No SLOP) */}
-        import { AlertTriangle } from 'lucide-react';
+        <div className="bg-[#2C2A29] py-3.5 px-4 sm:px-6 text-[#FAF6F0] overflow-hidden" id="bulletin-bar">
+  <div className="mx-auto max-w-7xl flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold font-mono tracking-wide">
 
-const BulletinBar = () => {
-  return (
-    <>
-      {/* Injeta o CSS da animação diretamente para funcionar sem configs externas */}
-      <style>
-        {`
-          @keyframes scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            animation: scroll-left 20s linear infinite;
-          }
-        `}
-      </style>
+    {/* Esquerda */}
+    <div className="flex items-center gap-2 shrink-0">
+      <AlertTriangle className="h-4 w-4 text-[#E8C26E]" />
+      <span>ATENÇÃO:</span>
+    </div>
 
-      <div 
-        className="bg-[#2C2A29] py-3 px-4 md:py-3.5 md:px-6 text-[#FAF6F0] overflow-hidden" 
-        id="bulletin-bar"
-      >
-        <div className="mx-auto max-w-7xl flex items-center justify-between text-xs sm:text-sm font-semibold font-mono tracking-wide gap-4">
-          
-          {/* Lado Esquerdo: Ícone e Título */}
-          <div className="flex items-center gap-2 shrink-0 z-10">
-            <AlertTriangle className="h-4 w-4 text-[#E8C26E]" />
-            <span className="whitespace-nowrap">ATENÇÃO:</span>
-          </div>
+    {/* Centro (marquee) */}
+    <div className="flex-1 min-w-0 marquee-text-container select-none">
+      A soberania felina já domina 43 mil lares brasileiros hoje. Força, resistência doméstica! 🐾
+    </div>
 
-          {/* Centro: Texto Animado (Marquee) */}
-          {/* relative container para contener a animação e os gradientes */}
-          <div className="flex-1 relative overflow-hidden mask-linear-gradient min-w-0 flex justify-center">
-            
-            {/* Gradiente esquerdo para limpar o fundo na entrada do texto */}
-            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-[#2C2A29] to-transparent z-10 pointer-events-none" />
-            
-            {/* Container duplo do texto para garantir loop infinito perfeito */}
-            <div className="flex animate-marquee gap-8">
-              <span className="whitespace-nowrap">
-                A soberania felina já domina 43 mil lares brasileiros hoje. Força, resistência doméstica! 🐾
-              </span>
-              {/* Duplicate para preencher o espaço e criar o loop */}
-              <span className="whitespace-nowrap">
-                A soberania felina já domina 43 mil lares brasileiros hoje. Força, resistência doméstica! 🐾
-              </span>
-            </div>
+    {/* Direita */}
+    <div className="w-full sm:w-auto flex justify-between sm:justify-end gap-4 opacity-75">
+      <span>Status: Alerta Laranja 🍊</span>
+      <span className="hidden sm:inline">Protejam os copos d'água</span>
+    </div>
 
-             {/* Gradiente direito para limpar o fundo na saída do texto */}
-            <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-[#2C2A29] to-transparent z-10 pointer-events-none" />
-          </div>
-
-          {/* Lado Direito: Status (Oculto no Mobile) */}
-          <div className="hidden md:flex items-center gap-5 shrink-0 opacity-75 z-10">
-            <span className="whitespace-nowrap">Status: Alerta Laranja 🍊</span>
-            <span>Protejam os copos d'água</span>
-          </div>
-          
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default BulletinBar;
-
+  </div>
+</div>
         {/* Dynamic reasons section with interactive filter options */}
         <ReasonsGallery />
 
